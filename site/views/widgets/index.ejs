@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>
+		</title>
+		<style>
+
+			td {
+				text-align: center;
+			}
+
+			tr:hover {
+				background: yellow;
+			}
+		</style>
+	</head>
+	<body>		
+		<% if(widgets.length) { %>
+<table style="border: 1px solid blue; width: 100%" align="center">
+	<caption>widgets</caption>
+	<tr>
+		<th>Name</th>
+		<th>ID</th>
+		<th>Price</th>
+		<th>Description</th>
+		<th>delete</th>
+		<th>edit</th>
+	</tr>
+	<% widgets.forEach(function(widget) { %>
+	<tr>
+		<td><%= widget.name %></td>
+		<td><%= widget.id %></td>
+		<td><%= widget.price %></td>
+		<td><%= widget.descr %></td>
+		<td><a href="/widgets/<%= widget.id %>/edit">Edit</td>
+		<td><a href="/widgets/<%= widget.id %>">Delete</a></td>
+	</tr>
+	<% }) %>
+</table>
+<% } %>
+	</body>
+</html>
+
+

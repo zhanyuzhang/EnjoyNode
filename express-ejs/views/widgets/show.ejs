@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title  %></title>
+</head>
+<body>
+	<h1><%= widget.name %></h1>
+	<ul>
+		<li>ID <%= widget.id %></li>
+		<li>Name: <%= widget.name %></li>
+		<li>Price: <%= widget.price %></li>
+		<li>Description: <%= widget.desc %></li>
+	</ul>
+	<form action="/widgets/<%= widget.id %>" method="POST">
+		<input type="hidden" value="delete" name="_method"/>
+		<input type="submit" name="submit" value="delete widget">
+	</form>	
+</body>
+</html>

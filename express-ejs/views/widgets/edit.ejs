@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>edit</title>
+</head>
+<body>
+	<h1>edit <%= widget.name %></h1>
+	<form method="post" action="http://localhost:3000/widgets/<%= widget.id %>">
+		<p>widget name: <input type="text" name="widgetname" value="<%= widget.name %>"></p>
+		<p>widget price: <input type="text" name="widgetprice" value="<%= widget.price %>"></p>
+		<p>widget description: <textarea name="widgetdesc"><%= widget.descr %></textarea></p>
+		<p>	
+			<input type="hidden" value="put" name="_method">	
+			<input type="submit" name="submit" value="submit">
+			<input type="reset" name="reset" value="reset">
+		</p>
+	</form>
+</body>
+</html>
