@@ -1,0 +1,10 @@
+extends ../layout
+block content
+		h1 #{title} | #{widget.name}
+		ul
+			li ID:#{widget.sn}
+			li Name:#{widget.name}
+			li Price:$#{widget.price}
+			li Desc:#{widget.desc}
+			li 
+				a(href="http://localhost:3000/widgets/" id="look") view more

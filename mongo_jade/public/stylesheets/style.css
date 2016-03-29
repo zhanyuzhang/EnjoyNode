@@ -1,0 +1,32 @@
+body {
+  /*padding: 50px;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table {
+	width: 100%
+}
+
+tr {
+	border: 3px solid black !important;
+}
+
+td {
+	text-align: center;
+}
+
+tr:hover {
+	background: #abcdef;
+}
+
+td {
+	text-align: center;
+}
+
+#look {
+	font-size: 24px;
+}

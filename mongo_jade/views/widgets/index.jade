@@ -1,0 +1,13 @@
+extends ../layout
+block content
+	table
+		if widgets.length
+			tr
+				th ID
+				th Name
+				th Price
+				th Description
+				th
+				th
+			each widget in widgets
+				include row

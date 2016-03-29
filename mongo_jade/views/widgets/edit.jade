@@ -1,0 +1,16 @@
+extends ../layout
+block content
+	h1 Edit #{widget.name}
+	form(method="POST" action="/widgets/#{widget.sn}")
+		p Widget SN:
+			input(type="text" name="widgetsn" value="#{widget.sn}")
+		p Widget Name:
+			input(type="text" name="widgetname" value="#{widget.name}")
+		p Widget Price:
+			input(type="text" name="widgetprice" value="#{widget.price}" )
+		p Widget Description:
+			textarea(name="widgetdesc") #{widget.desc}
+		p
+			input(type="hidden" name="_method" value="put")
+			input(type="submit" name="submit" value="submit")
+			input(type="reset" value="reset" name="reset")
